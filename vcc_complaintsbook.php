@@ -58,6 +58,8 @@ class Vcc_complaintsbook extends Module implements WidgetInterface
      */
     public function install()
     {
+        include(dirname(__FILE__).'/sql/alter.php');
+
         Configuration::updateValue('VCC_COMPLAINTSBOOK_LIVE_MODE', false);
 
         return parent::install() &&
@@ -119,7 +121,7 @@ class Vcc_complaintsbook extends Module implements WidgetInterface
             'id_language' => $this->context->language->id,
         );
 
-        return $helper->generateForm(array($this->getConfigForm()));
+        // return $helper->generateForm(array($this->getConfigForm()));
     }
 
     /**

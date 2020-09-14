@@ -1,4 +1,6 @@
-{if !$oldVersion}
+{if $oldVersion}
+
+{else}
   {extends file='page.tpl'}
 
   {block name="page_content"}
@@ -144,6 +146,8 @@
     </small>
   </form>
   </div>
-{if !$oldVersion}
+{if $oldVersion}
+
+{else}
   {/block}
 {/if}

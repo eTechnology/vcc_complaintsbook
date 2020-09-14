@@ -32,7 +32,7 @@ class Vcc_complaintsbookFormModuleFrontController extends ModuleFrontController
     {
         parent::initContent();
 
-        $oldVersion = _PS_VERSION_ <= 1.6
+        $oldVersion = _PS_VERSION_ <= 1.6;
 
         $this->context->controller->addJS(_MODULE_DIR_.$this->module->name.'/views/js/form.js');
 

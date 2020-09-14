@@ -1,10 +1,4 @@
-{if $oldVersion}
 
-{else}
-  {extends file='page.tpl'}
-
-  {block name="page_content"}
-{/if}
   <script src="https://www.google.com/recaptcha/api.js?render=6LdyD_0UAAAAAD0hbj0PiU4cfvDBQfEoHxTWegY9"></script>
   <div class="col-sm-8 offset-sm-2">
   <form id="mod-contact-form">
@@ -146,8 +140,3 @@
     </small>
   </form>
   </div>
-{if $oldVersion}
-
-{else}
-  {/block}
-{/if}

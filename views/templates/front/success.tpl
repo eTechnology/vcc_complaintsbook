@@ -1,6 +1,4 @@
-{extends file='page.tpl'}
 
-{block name="page_content"}
   <div class="col-sm-8 offset-sm-2">
     <div id="mod-contact-form">
       <div style="height: 20px;"></div>
@@ -11,4 +9,3 @@
       </div>
     </div>
   </div>
-{/block}

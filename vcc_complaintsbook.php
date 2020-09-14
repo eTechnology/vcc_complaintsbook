@@ -28,9 +28,9 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-use PrestaShop\PrestaShop\Core\Module\WidgetInterface;
 
-class Vcc_complaintsbook extends Module implements WidgetInterface
+
+class Vcc_complaintsbook extends Module
 {
     protected $config_form = false;
 
@@ -49,7 +49,7 @@ class Vcc_complaintsbook extends Module implements WidgetInterface
         $this->displayName = $this->l('Complaints book');
         $this->description = $this->l('Custom form complaints book');
 
-        $this->ps_versions_compliancy = array('min' => '1.7', 'max' => '1.8');
+        $this->ps_versions_compliancy = array('min' => '1.6', 'max' => '1.8');
     }
 
     /**

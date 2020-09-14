@@ -47,6 +47,7 @@ class Vcc_complaintsbookFormModuleFrontController extends ModuleFrontController
             'contacts' => Contact::getContacts($this->context->language->id)
         ]);
 
-        $this->setTemplate('module:vcc_complaintsbook/views/templates/front/form.tpl');
+        $pathTPL = _PS_VERSION_ <= 1.6 ? 'form.tpl' : 'module:vcc_complaintsbook/views/templates/front/form.tpl';
+        $this->setTemplate($pathTPL);
     }
 }

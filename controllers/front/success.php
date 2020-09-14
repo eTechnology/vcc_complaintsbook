@@ -36,6 +36,7 @@ class Vcc_complaintsbookSuccessModuleFrontController extends ModuleFrontControll
             'id_thread' => Tools::getValue('thread')
         ]);
 
-        $this->setTemplate('module:vcc_complaintsbook/views/templates/front/success.tpl');
+        $pathTPL = _PS_VERSION_ <= 1.6 ? 'success.tpl' : 'module:vcc_complaintsbook/views/templates/front/success.tpl';
+        $this->setTemplate($pathTPL);
     }
 }

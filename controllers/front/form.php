@@ -32,6 +32,8 @@ class Vcc_complaintsbookFormModuleFrontController extends ModuleFrontController
     {
         parent::initContent();
 
+        $oldVersion = _PS_VERSION_ <= 1.6
+
         $this->context->controller->addJS(_MODULE_DIR_.$this->module->name.'/views/js/form.js');
 
         $urlAjax = $this->context->link->getModuleLink($this->module->name,'ajax', ['mToken' => $this->module->tokenComplaintsBook], Configuration::get('PS_SSL_ENABLED'));
@@ -44,10 +46,11 @@ class Vcc_complaintsbookFormModuleFrontController extends ModuleFrontController
         ));
 
         $this->context->smarty->assign([
+            'oldVersion' => $oldVersion,
             'contacts' => Contact::getContacts($this->context->language->id)
         ]);
 
-        $pathTPL = _PS_VERSION_ <= 1.6 ? 'form.tpl' : 'module:vcc_complaintsbook/views/templates/front/form.tpl';
+        $pathTPL = $oldVersion ? 'form.tpl' : 'module:vcc_complaintsbook/views/templates/front/form.tpl';
         $this->setTemplate($pathTPL);
     }
 }

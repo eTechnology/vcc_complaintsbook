@@ -28,8 +28,6 @@ if (!defined('_PS_VERSION_')) {
     exit;
 }
 
-
-
 class Vcc_complaintsbook extends Module
 {
     protected $config_form = false;
@@ -45,7 +43,7 @@ class Vcc_complaintsbook extends Module
 
         parent::__construct();
 
-        $this->tokenComplaintsBook = Tools::hash($this->name.date('YmdH'));
+        $this->tokenComplaintsBook = hash('md5', $this->name.date('YmdH'));
         $this->displayName = $this->l('Complaints book');
         $this->description = $this->l('Custom form complaints book');
 
